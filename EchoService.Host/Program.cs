@@ -1,7 +1,9 @@
 using System;
 using System.ServiceModel;
 
-namespace EchoService
+using EchoService;
+
+namespace EchoService.Host
 {
     public static class Program
     {
