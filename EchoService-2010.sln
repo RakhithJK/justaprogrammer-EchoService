@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoService", "EchoService\EchoService.csproj", "{105AABB1-25BF-4E7D-8636-87F54F6A0E52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoService.Host", "EchoService.Host\EchoService.Host.csproj", "{013F8815-534F-4C67-9B33-7178C2DCF30E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EchoService.Website", "EchoService.Website\", "{1C316B50-811B-4811-9EAA-62D584B37468}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{105AABB1-25BF-4E7D-8636-87F54F6A0E52}|EchoService.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/EchoService.Website"
+		Debug.AspNetCompiler.PhysicalPath = "EchoService.Website\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\EchoService.Website\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/EchoService.Website"
+		Release.AspNetCompiler.PhysicalPath = "EchoService.Website\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\EchoService.Website\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "14232"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WCFService.DeleteMe", "..\WCFService.DeleteMe\", "{E8EE7F31-CCD6-428B-88E5-4FE31D361423}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/WCFService.DeleteMe"
+		Debug.AspNetCompiler.PhysicalPath = "..\WCFService.DeleteMe\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WCFService.DeleteMe\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WCFService.DeleteMe"
+		Release.AspNetCompiler.PhysicalPath = "..\WCFService.DeleteMe\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WCFService.DeleteMe\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "15010"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{105AABB1-25BF-4E7D-8636-87F54F6A0E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105AABB1-25BF-4E7D-8636-87F54F6A0E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105AABB1-25BF-4E7D-8636-87F54F6A0E52}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{105AABB1-25BF-4E7D-8636-87F54F6A0E52}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{105AABB1-25BF-4E7D-8636-87F54F6A0E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105AABB1-25BF-4E7D-8636-87F54F6A0E52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105AABB1-25BF-4E7D-8636-87F54F6A0E52}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{105AABB1-25BF-4E7D-8636-87F54F6A0E52}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{013F8815-534F-4C67-9B33-7178C2DCF30E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{013F8815-534F-4C67-9B33-7178C2DCF30E}.Debug|Any CPU.Build.0 = Debug|x86
+		{013F8815-534F-4C67-9B33-7178C2DCF30E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{013F8815-534F-4C67-9B33-7178C2DCF30E}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{013F8815-534F-4C67-9B33-7178C2DCF30E}.Release|Any CPU.ActiveCfg = Release|x86
+		{013F8815-534F-4C67-9B33-7178C2DCF30E}.Release|Any CPU.Build.0 = Release|x86
+		{013F8815-534F-4C67-9B33-7178C2DCF30E}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{013F8815-534F-4C67-9B33-7178C2DCF30E}.Release|Mixed Platforms.Build.0 = Release|x86
+		{1C316B50-811B-4811-9EAA-62D584B37468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C316B50-811B-4811-9EAA-62D584B37468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C316B50-811B-4811-9EAA-62D584B37468}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1C316B50-811B-4811-9EAA-62D584B37468}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1C316B50-811B-4811-9EAA-62D584B37468}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C316B50-811B-4811-9EAA-62D584B37468}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{1C316B50-811B-4811-9EAA-62D584B37468}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1C316B50-811B-4811-9EAA-62D584B37468}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E8EE7F31-CCD6-428B-88E5-4FE31D361423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8EE7F31-CCD6-428B-88E5-4FE31D361423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8EE7F31-CCD6-428B-88E5-4FE31D361423}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E8EE7F31-CCD6-428B-88E5-4FE31D361423}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E8EE7F31-CCD6-428B-88E5-4FE31D361423}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8EE7F31-CCD6-428B-88E5-4FE31D361423}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E8EE7F31-CCD6-428B-88E5-4FE31D361423}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E8EE7F31-CCD6-428B-88E5-4FE31D361423}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
