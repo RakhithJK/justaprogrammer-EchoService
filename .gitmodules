@@ -1,0 +1,3 @@
+[submodule "EchoService.Website\\ObjectId-jscript"]
+	path = EchoService.Website\\ObjectId-jscript
+	url = git://gist.github.com/780246.git
