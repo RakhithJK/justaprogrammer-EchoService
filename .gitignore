@@ -3,4 +3,5 @@ bin/
 obj/
 EchoService.Website/Bin/EchoService.*
 _ReSharper.*/
-
+*.ReSharper.user
+*.suo
