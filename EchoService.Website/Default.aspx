@@ -3,6 +3,7 @@
 <head>
     <title>Echo Service Test page</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript" src="json2.js"></script>
     <script type="text/javascript" src="ObjectId-jscript/Objectid.js"></script>
 </head>
 <body>
@@ -37,8 +38,7 @@
                     response.val(data.d);
                 },
                 error: function (request, status, error) {
-                    console.log(JSON.stringify(request));
-                    ajaxOutput.val(jQuery.sprintf('Something screwed up: request: %s, status: %s, error: %s', JSON.stringify(request), status, error));
+                    //TODO: do something here
                 }
             });
         });
