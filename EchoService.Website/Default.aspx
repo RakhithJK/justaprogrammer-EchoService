@@ -20,7 +20,7 @@
         <input id="btnEchoObjectId" type="button" value="Submit" />
         <input id="btnNewObjectId" type="button" value="New ObjectId" />
         <br />
-        <textarea id="txtResponseObjectId" cols="30" rows="7"></textarea>
+        <textarea id="txtResponseObjectId" cols="60" rows="7"></textarea>
     </p>
     </form>
     <script type="text/javascript">
@@ -45,6 +45,7 @@
         $("#btnNewObjectId").click(function () {
             var request = $("#requestObjectId");
             request.val(ObjectId());
+            $("#btnEchoObjectId").click();
         });
         $("#btnEchoObjectId").click(function () {
             var request = $("#requestObjectId");
@@ -59,7 +60,7 @@
                 success: function (data) {
                     var objectId = new ObjectId(data.d);
                     response.val(objectId.toString());
-                    responseTxt.val(JSON.stringify(objectId, null, 2));
+                    responseTxt.val(JSON.stringify(objectId, null, 2) + "\n" + Date(objectId.getDate()));
                 },
                 error: function (request, status, error) {
                     console.log(JSON.stringify(request));
