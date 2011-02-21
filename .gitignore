@@ -5,3 +5,5 @@ EchoService.Website/Bin/EchoService.*
 _ReSharper.*/
 *.ReSharper.user
 *.suo
+UpgradeLog.XML
+_UpgradeReport_Files/
