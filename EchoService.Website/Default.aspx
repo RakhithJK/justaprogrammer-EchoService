@@ -3,7 +3,7 @@
 <head>
     <title>Echo Service Test page</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script type="text/javascript" src="json2.js"></script>
+    <script type="text/javascript" src="Scripts/json2.min.js"></script>
     <script type="text/javascript" src="ObjectId-jscript/Objectid.js"></script>
 </head>
 <body>
