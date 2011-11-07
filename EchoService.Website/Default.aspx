@@ -24,6 +24,14 @@
         <br />
         <textarea id="txtResponseObjectId" cols="60" rows="7"></textarea>
     </p>
+    <p>
+        Guid/ObjectId generation:<br />
+        Number to generate:&nbsp;<input id="txtIdCount" type="text" value="1" size='30' maxlength="24"/>
+        <input id="btnGuids" type="button" value="Generate Guids" />
+        <input id="btnObjectIds" type="button" value="Generate ObjectIds" />
+        <br />
+        <textarea id="txtIdResponse" cols="60" rows="7"></textarea>
+    </p>
     </form>
     <script type="text/javascript">
         $("#btnEchoString").click(function () {
@@ -66,6 +74,42 @@
                 error: function (request, status, error) {
                     console.log(JSON.stringify(request));
                     ajaxOutput.val(jQuery.sprintf('Something screwed up: request: %s, status: %s, error: %s', JSON.stringify(request), status, error));
+                }
+            });
+        });
+        $("#btnGuids,#btnObjectIds").click(function () {
+            var count = $('#txtIdCount').val();
+            var response = $("#txtIdResponse");
+            $.ajax({
+                url: this.id == 'btnGuids'
+                    ? 'EchoService.svc/JSON/GenerateGuids'
+                    : 'EchoService.svc/JSON/GenerateObjectIds',
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({ count: parseInt(count) }),
+                dataType: "json",
+                success: function (data) {
+                    if (data.d.length == 0) {
+                        response.val('');
+                        return;
+                    }
+                    var output = '';
+
+                    if (typeof (data.d[0]) == "string") {
+                        for (var i in data.d) {
+                            output += data.d[i] + '\n';
+                        }
+                    }
+                    else if (typeof (data.d[0]) == "object") {
+                        for (var i in data.d) {
+                            output += ObjectId(data.d[i]) + '\n';
+                        }
+                    }
+                    response.val(output);
+                },
+                error: function (request, status, error) {
+                    //console.log(JSON.stringify(request));
+                    response.val(jQuery.sprintf('Something screwed up: request: %s, status: %s, error: %s', JSON.stringify(request), status, error));
                 }
             });
         });
