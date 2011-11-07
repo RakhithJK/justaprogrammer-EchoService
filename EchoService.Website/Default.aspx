@@ -2,17 +2,18 @@
 <html>
 <head>
     <title>Echo Service Test page</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="Scripts/json2.min.js"></script>
     <script type="text/javascript" src="ObjectId-jscript/Objectid.js"></script>
 </head>
 <body>
-    <form id="frmTestService" method="get" action="Default.aspx">
+    <form id="frmTestService" method="post" action="EchoClient.php">
     <p>
         Echo String:
-        <input id="request" type="text" value="" />
+        <input id="request" name="request" type="text" value="" />
         <input id="response" type="text" value="" />
         <input id="btnEchoString" type="button" value="Submit" />
+        <input id="btnEchoStringPhp" type="submit" value="Submit to EchoClient.php" />
     </p>
     <p>
         Echo ObjectId:
