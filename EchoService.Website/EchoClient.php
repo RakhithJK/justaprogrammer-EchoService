@@ -3,10 +3,11 @@
  * This script was originally used to test PHP bug 50698.
  * http://bugs.php.net/bug.php?id=50698
  */
-//trigger_error('Test notice', E_USER_NOTICE);
-//trigger_error('Test warning', E_USER_WARNING);
-
+ 
 use_soap_error_handler(true);
+
+$request = array_key_exists('request', $_REQUEST) ? $_REQUEST['request'] : 'Hello World!';
+
 $client = new SoapClient
 	("http://${_SERVER['SERVER_NAME']}:${_SERVER['SERVER_PORT']}/EchoService.svc?wsdl",
 	 array(
@@ -16,5 +17,6 @@ $client = new SoapClient
 		'connection_timeout' => 5
 	)
 );
-echo "Soap Result: " . $client->echo(array('request' => "Hello World"))->EchoResult;
+
+echo "Soap Result: " . $client->echo(array('request' => $request))->EchoResult;
 ?>
