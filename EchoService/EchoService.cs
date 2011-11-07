@@ -46,13 +46,13 @@ namespace EchoService
         }
 
         [OperationContract]
-        public Guid GetGuid()
+        public Guid GenerateGuid()
         {
             return Guid.NewGuid();
         }
 
         [OperationContract]
-        public IList<Guid> GetGuids(int count)
+        public IList<Guid> GenerateGuids(int count)
         {
             var response = new Guid[count];
             for (var i = 0; i < count; i++)
@@ -63,13 +63,13 @@ namespace EchoService
         }
 
         [OperationContract]
-        public ObjectId GetObjectId()
+        public ObjectId GenetateObjectId()
         {
             return ObjectId.GenerateNewId();
         }
 
         [OperationContract]
-        public IList<ObjectId> GetObjectIds(int count)
+        public IList<ObjectId> GenerateObjectIds(int count)
         {
             var response = new ObjectId[count];
             for (var i = 0; i < count; i++)
