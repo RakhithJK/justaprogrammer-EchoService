@@ -7,3 +7,4 @@ _ReSharper.*/
 *.suo
 UpgradeLog.XML
 _UpgradeReport_Files/
+*.DotSettings.user
